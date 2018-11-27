@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28010.2048
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataModel", "DataModel\DataModel.csproj", "{4FD6C9B8-3D98-47FD-B9B2-16E477BF76A1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HiCC", "HiCC\HiCC.csproj", "{F34995E1-4E07-404F-A122-AFAB45283AA4}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{4FD6C9B8-3D98-47FD-B9B2-16E477BF76A1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4FD6C9B8-3D98-47FD-B9B2-16E477BF76A1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4FD6C9B8-3D98-47FD-B9B2-16E477BF76A1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4FD6C9B8-3D98-47FD-B9B2-16E477BF76A1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F34995E1-4E07-404F-A122-AFAB45283AA4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F34995E1-4E07-404F-A122-AFAB45283AA4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F34995E1-4E07-404F-A122-AFAB45283AA4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F34995E1-4E07-404F-A122-AFAB45283AA4}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {C832AE1C-F9DF-40AB-87CE-F8AC246E9F30}
+	EndGlobalSection
+EndGlobal

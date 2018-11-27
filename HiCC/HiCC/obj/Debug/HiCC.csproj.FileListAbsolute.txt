@@ -1,0 +1,17 @@
+F:\DHSPKT_L\N3HKI\HeQTCSDL\7\HiCC\HiCC\bin\Debug\HiCC.exe.config
+F:\DHSPKT_L\N3HKI\HeQTCSDL\7\HiCC\HiCC\bin\Debug\HiCC.exe
+F:\DHSPKT_L\N3HKI\HeQTCSDL\7\HiCC\HiCC\bin\Debug\HiCC.pdb
+F:\DHSPKT_L\N3HKI\HeQTCSDL\7\HiCC\HiCC\bin\Debug\DataModel.dll
+F:\DHSPKT_L\N3HKI\HeQTCSDL\7\HiCC\HiCC\bin\Debug\EntityFramework.dll
+F:\DHSPKT_L\N3HKI\HeQTCSDL\7\HiCC\HiCC\bin\Debug\EntityFramework.SqlServer.dll
+F:\DHSPKT_L\N3HKI\HeQTCSDL\7\HiCC\HiCC\bin\Debug\DataModel.pdb
+F:\DHSPKT_L\N3HKI\HeQTCSDL\7\HiCC\HiCC\bin\Debug\EntityFramework.xml
+F:\DHSPKT_L\N3HKI\HeQTCSDL\7\HiCC\HiCC\bin\Debug\EntityFramework.SqlServer.xml
+F:\DHSPKT_L\N3HKI\HeQTCSDL\7\HiCC\HiCC\obj\Debug\HiCC.csprojResolveAssemblyReference.cache
+F:\DHSPKT_L\N3HKI\HeQTCSDL\7\HiCC\HiCC\obj\Debug\HiCC.Form1.resources
+F:\DHSPKT_L\N3HKI\HeQTCSDL\7\HiCC\HiCC\obj\Debug\HiCC.Properties.Resources.resources
+F:\DHSPKT_L\N3HKI\HeQTCSDL\7\HiCC\HiCC\obj\Debug\HiCC.csproj.GenerateResource.Cache
+F:\DHSPKT_L\N3HKI\HeQTCSDL\7\HiCC\HiCC\obj\Debug\HiCC.exe
+F:\DHSPKT_L\N3HKI\HeQTCSDL\7\HiCC\HiCC\obj\Debug\HiCC.pdb
+F:\DHSPKT_L\N3HKI\HeQTCSDL\7\HiCC\HiCC\obj\Debug\HiCC.fmFVendor.resources
+F:\DHSPKT_L\N3HKI\HeQTCSDL\7\HiCC\HiCC\obj\Debug\HiCC.AddModifyVendor.resources
