@@ -9,7 +9,7 @@
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>DataModel</RootNamespace>
     <AssemblyName>DataModel</AssemblyName>
-    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <Deterministic>true</Deterministic>
     <TargetFrameworkProfile />
@@ -51,70 +51,72 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Class1.cs" />
+    <Compile Include="DeleteLog.cs">
+      <DependentUpon>PayablesModel.tt</DependentUpon>
+    </Compile>
     <Compile Include="GLAccount.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
+      <DependentUpon>PayablesModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Invoice.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
+      <DependentUpon>PayablesModel.tt</DependentUpon>
     </Compile>
     <Compile Include="InvoiceLineItem.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
+      <DependentUpon>PayablesModel.tt</DependentUpon>
     </Compile>
     <Compile Include="InvoiceP.cs" />
-    <Compile Include="Model1.Context.cs">
+    <Compile Include="ObservableListSource.cs" />
+    <Compile Include="PayablesModel.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>Model1.Context.tt</DependentUpon>
+      <DependentUpon>PayablesModel.Context.tt</DependentUpon>
     </Compile>
-    <Compile Include="Model1.cs">
+    <Compile Include="PayablesModel.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>Model1.tt</DependentUpon>
+      <DependentUpon>PayablesModel.tt</DependentUpon>
     </Compile>
-    <Compile Include="Model1.Designer.cs">
+    <Compile Include="PayablesModel.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>Model1.edmx</DependentUpon>
+      <DependentUpon>PayablesModel.edmx</DependentUpon>
     </Compile>
-    <Compile Include="ObservablelistSource.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="State.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
+      <DependentUpon>PayablesModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Term.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
+      <DependentUpon>PayablesModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Vendor.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
+      <DependentUpon>PayablesModel.tt</DependentUpon>
     </Compile>
     <Compile Include="VendorP.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
-    <EntityDeploy Include="Model1.edmx">
-      <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>Model1.Designer.cs</LastGenOutput>
-    </EntityDeploy>
-    <None Include="Model1.edmx.diagram">
-      <DependentUpon>Model1.edmx</DependentUpon>
-    </None>
     <None Include="packages.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="Model1.Context.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>Model1.edmx</DependentUpon>
-      <LastGenOutput>Model1.Context.cs</LastGenOutput>
-    </Content>
-    <Content Include="Model1.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>Model1.edmx</DependentUpon>
-      <LastGenOutput>Model1.cs</LastGenOutput>
-    </Content>
+    <EntityDeploy Include="PayablesModel.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>PayablesModel.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="PayablesModel.edmx.diagram">
+      <DependentUpon>PayablesModel.edmx</DependentUpon>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="PayablesModel.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>PayablesModel.edmx</DependentUpon>
+      <LastGenOutput>PayablesModel.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="PayablesModel.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>PayablesModel.edmx</DependentUpon>
+      <LastGenOutput>PayablesModel.cs</LastGenOutput>
+    </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

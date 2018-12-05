@@ -17,8 +17,8 @@ namespace DataModel
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public Term()
         {
-            this.Invoices = new ObservablelistSource<Invoice>();
-            this.Vendors = new ObservablelistSource<Vendor>();
+            this.Invoices = new ObservableListSource<Invoice>();
+            this.Vendors = new ObservableListSource<Vendor>();
         }
     
         public int TermsID { get; set; }
@@ -26,8 +26,8 @@ namespace DataModel
         public short DueDays { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ObservablelistSource<Invoice> Invoices { get; set; }
+        public virtual ObservableListSource<Invoice> Invoices { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ObservablelistSource<Vendor> Vendors { get; set; }
+        public virtual ObservableListSource<Vendor> Vendors { get; set; }
     }
 }

@@ -7,7 +7,6 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using System.Data.Entity;
 using DataModel;
 namespace HiCC
 {
@@ -15,110 +14,102 @@ namespace HiCC
     {
         public Vendor vendor;
         private bool addVendor;
-        private PayablesEntities _context; 
-        public AddModifyVendor(PayablesEntities context)
+        private PayablesEntities _context;
+        public AddModifyVendor()
         {
             InitializeComponent();
-            _context = context;
+        }
+        public AddModifyVendor( PayablesEntities context)
+        {// adding new vendor
+            InitializeComponent();
+            this._context = context;
             addVendor = true;
         }
-        public AddModifyVendor(PayablesEntities context,Vendor vendor)
-        {
+        public AddModifyVendor(PayablesEntities context, Vendor vendor)
+        {// updating passed vendor
             InitializeComponent();
             this.vendor = vendor;
-            _context = context;
+            this._context = context;
             addVendor = false;
         }
-        private void LoadComboBox()
+        private void AddModifyVendor_Load(object sender, EventArgs e)
+        {
+            LoadComboBoxes();
+            if(addVendor)
+            {
+                this.Text = "Add Vendor";
+                cbostateName.SelectedIndex = -1;
+                cboTerms.SelectedIndex = -1;
+                cboAcc.SelectedIndex = -1;
+            }
+            else
+            {
+                this.Text = "Modify Vendor";
+                DisplayVendorData();
+            }
+        }
+        public void DisplayVendorData()
+        {
+            txtName.Text = vendor.Name;
+            txtAddress1.Text = vendor.Address1;
+            txtAddress2.Text = vendor.Address2;
+            txtCity.Text = vendor.City;
+            cbostateName.SelectedValue = vendor.State.StateCode;
+            txtZip.Text = vendor.ZipCode;
+            cboTerms.SelectedValue = vendor.Term.TermsID;
+            cboAcc.SelectedValue = vendor.GLAccount.AccountNo;
+            if (vendor.Phone == null || vendor.Phone == "")
+                txtPhone.Text = "";
+            else
+                txtPhone.Text = vendor.Phone;
+            txtContactFname.Text = vendor.ContactFName;
+            label.Text = vendor.ContactFName;
+        }
+        private void LoadComboBoxes()
         {
             try
             {
-                cmbState.DataSource = _context.States.OrderBy(state => state.StateName).ToList();
-                cmbState.DisplayMember = "StateName";
-                cmbState.ValueMember = "SateCode";
+                cbostateName.DataSource =
+                    _context.States.OrderBy(State => State.StateName).ToList();
+                cbostateName.DisplayMember = "StateName";
+                cbostateName.ValueMember = "StateCode";
 
-                cmbTems.DataSource = _context.Terms.ToList();
-                cmbTems.DisplayMember = "Description";
-                cmbTems.ValueMember = "termsID";
+                cboTerms.DataSource = _context.Terms.ToList();
+                cboTerms.DisplayMember = "Description";
+                cboTerms.ValueMember = "TermsID";
 
-                cmbAccount.DataSource = _context.GLAccounts.ToList();
-                cmbAccount.DisplayMember = "description";
-                cmbAccount.ValueMember = "accountNo";
-            }
-            catch(Exception ex)
+                cboAcc.DataSource = _context.GLAccounts.ToList();
+                cboAcc.DisplayMember = "Description";
+                cboAcc.ValueMember = "AccountNo";
+            } catch(Exception ex)
             {
                 MessageBox.Show(ex.Message, ex.GetType().ToString());
             }
         }
-        private void treeView1_AfterSelect(object sender, TreeViewEventArgs e)
-        {
-
-        }
-
-        private void menuStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
-        {
-
-        }
-
-        private void label10_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void AddModifyVendor_Load(object sender, EventArgs e)
-        {
-            LoadComboBox();
-            if(addVendor)
-            {
-                Text = "add vendor";
-                cmbState.SelectedIndex = -1;
-                cmbTems.SelectedIndex = -1;
-                cmbAccount.SelectedIndex = -1;
-            }
-            else
-            {
-                Text = "Modify vendor"; 
-                DisplayVendorData();
-            }
-        }
-        private void DisplayVendorData()
-        {
-            txtName.Text = vendor.Name;
-            txtAddress.Text = vendor.Address1;
-            txtAddress2.Text = vendor.Address2;
-            txtCity.Text = vendor.City;
-            cmbState.SelectedValue = vendor.State1.StateCode;
-            txtZip.Text = vendor.ZipCode;
-            cmbTems.SelectedValue = vendor.Term.TermsID;
-            cmbAccount.SelectedValue = vendor.GLAccount.AccountNo;
-            if (vendor.Phone == null || vendor.Phone == "")
-                txtphone.Text = "";
-            else
-                txtphone.Text = vendor.Phone;
-            txtContactFname.Text = vendor.ContactFName;
-            txtContactLName.Text = vendor.ContactLName;
-        }
-        private void  PutVendorData()
+        private void PutVendorData()
         {
             vendor.Name = txtName.Text;
-            vendor.Address1 = txtAddress.Text;
+            vendor.Address1 = txtAddress1.Text;
             vendor.Address2 = txtAddress2.Text;
             vendor.City = txtCity.Text;
-            vendor.State1 =(State)cmbState.SelectedItem;
+            vendor.State = (State)cbostateName.SelectedItem;
             vendor.ZipCode = txtZip.Text;
-            vendor.Term = (Term)cmbTems.SelectedItem;
-            vendor.GLAccount = (GLAccount)cmbAccount.SelectedItem;
-            vendor.Phone = txtphone.Text;
+            vendor.Term = (Term)cboTerms.SelectedItem;
+            vendor.GLAccount = (GLAccount)cboAcc.SelectedItem;
+            vendor.Phone = txtPhone.Text.Replace(".", "");
             vendor.ContactFName = txtContactFname.Text;
-            vendor.ContactLName = txtContactLName.Text;
+            vendor.ContactLName = label.Text;
+
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void btnAccept_Click(object sender, EventArgs e)
         {
-            if (addVendor)
+            if(addVendor)
+            {
                 vendor = new Vendor();
+            }
             PutVendorData();
-            DialogResult = DialogResult.OK;
+            this.DialogResult = DialogResult.OK;
         }
     }
 }

@@ -17,22 +17,20 @@ namespace DataModel
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public Invoice()
         {
-            this.InvoiceLineItems = new ObservablelistSource<InvoiceLineItem>();
+            this.InvoiceLineItems = new ObservableListSource<InvoiceLineItem>();
         }
     
         public int InvoiceID { get; set; }
-        public int VendorID { get; set; }
         public string InvoiceNumber { get; set; }
         public System.DateTime InvoiceDate { get; set; }
         public decimal InvoiceTotal { get; set; }
         public decimal PaymentTotal { get; set; }
         public decimal CreditTotal { get; set; }
-        public int TermsID { get; set; }
         public System.DateTime DueDate { get; set; }
         public Nullable<System.DateTime> PaymentDate { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ObservablelistSource<InvoiceLineItem> InvoiceLineItems { get; set; }
+        public virtual ObservableListSource<InvoiceLineItem> InvoiceLineItems { get; set; }
         public virtual Term Term { get; set; }
         public virtual Vendor Vendor { get; set; }
     }

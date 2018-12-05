@@ -17,7 +17,7 @@ namespace DataModel
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public Vendor()
         {
-            this.Invoices = new ObservablelistSource<Invoice>();
+            this.Invoices = new ObservableListSource<Invoice>();
         }
     
         public int VendorID { get; set; }
@@ -25,19 +25,16 @@ namespace DataModel
         public string Address1 { get; set; }
         public string Address2 { get; set; }
         public string City { get; set; }
-        public string State { get; set; }
         public string ZipCode { get; set; }
         public string Phone { get; set; }
         public string ContactLName { get; set; }
         public string ContactFName { get; set; }
-        public int DefaultTermsID { get; set; }
-        public int DefaultAccountNo { get; set; }
         public byte[] RowVersion { get; set; }
     
         public virtual GLAccount GLAccount { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ObservablelistSource<Invoice> Invoices { get; set; }
-        public virtual State State1 { get; set; }
+        public virtual ObservableListSource<Invoice> Invoices { get; set; }
+        public virtual State State { get; set; }
         public virtual Term Term { get; set; }
     }
 }

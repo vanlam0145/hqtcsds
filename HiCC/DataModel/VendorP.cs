@@ -15,8 +15,8 @@ namespace DataModel
                 string s;
                 s = Name + ", " + Address1 + ", ";
                 if (Address2 != "")
-                    s += Address2 + ", ";
-                s += City + ", " + State1.StateName + " " + ZipCode;
+                    s += Address2 + ",";
+                s += City + ", " + State.StateName + " " + ZipCode;
                 return s;
             }
         }

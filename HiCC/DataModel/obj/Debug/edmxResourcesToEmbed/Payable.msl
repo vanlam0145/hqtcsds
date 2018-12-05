@@ -1,0 +1,121 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="PayablesModelStoreContainer" CdmEntityContainer="PayablesEntities">
+    <EntitySetMapping Name="GLAccounts">
+      <EntityTypeMapping TypeName="PayablesModel.GLAccount">
+        <MappingFragment StoreEntitySet="GLAccounts">
+          <ScalarProperty Name="AccountNo" ColumnName="AccountNo" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="InvoiceLineItems">
+      <EntityTypeMapping TypeName="PayablesModel.InvoiceLineItem">
+        <MappingFragment StoreEntitySet="InvoiceLineItems">
+          <ScalarProperty Name="InvoiceID" ColumnName="InvoiceID" />
+          <ScalarProperty Name="InvoiceSequence" ColumnName="InvoiceSequence" />
+          <ScalarProperty Name="Amount" ColumnName="Amount" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Invoices">
+      <EntityTypeMapping TypeName="PayablesModel.Invoice">
+        <MappingFragment StoreEntitySet="Invoices">
+          <ScalarProperty Name="InvoiceID" ColumnName="InvoiceID" />
+          <ScalarProperty Name="InvoiceNumber" ColumnName="InvoiceNumber" />
+          <ScalarProperty Name="InvoiceDate" ColumnName="InvoiceDate" />
+          <ScalarProperty Name="InvoiceTotal" ColumnName="InvoiceTotal" />
+          <ScalarProperty Name="PaymentTotal" ColumnName="PaymentTotal" />
+          <ScalarProperty Name="CreditTotal" ColumnName="CreditTotal" />
+          <ScalarProperty Name="DueDate" ColumnName="DueDate" />
+          <ScalarProperty Name="PaymentDate" ColumnName="PaymentDate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="States">
+      <EntityTypeMapping TypeName="PayablesModel.State">
+        <MappingFragment StoreEntitySet="States">
+          <ScalarProperty Name="StateCode" ColumnName="StateCode" />
+          <ScalarProperty Name="StateName" ColumnName="StateName" />
+          <ScalarProperty Name="FirstZipCode" ColumnName="FirstZipCode" />
+          <ScalarProperty Name="LastZipCode" ColumnName="LastZipCode" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Terms">
+      <EntityTypeMapping TypeName="PayablesModel.Term">
+        <MappingFragment StoreEntitySet="Terms">
+          <ScalarProperty Name="TermsID" ColumnName="TermsID" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="DueDays" ColumnName="DueDays" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Vendors">
+      <EntityTypeMapping TypeName="PayablesModel.Vendor">
+        <MappingFragment StoreEntitySet="Vendors">
+          <ScalarProperty Name="VendorID" ColumnName="VendorID" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Address1" ColumnName="Address1" />
+          <ScalarProperty Name="Address2" ColumnName="Address2" />
+          <ScalarProperty Name="City" ColumnName="City" />
+          <ScalarProperty Name="ZipCode" ColumnName="ZipCode" />
+          <ScalarProperty Name="Phone" ColumnName="Phone" />
+          <ScalarProperty Name="ContactLName" ColumnName="ContactLName" />
+          <ScalarProperty Name="ContactFName" ColumnName="ContactFName" />
+          <ScalarProperty Name="RowVersion" ColumnName="RowVersion" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <AssociationSetMapping Name="FK_InvoiceLineItems_GLAccounts" TypeName="PayablesModel.FK_InvoiceLineItems_GLAccounts" StoreEntitySet="InvoiceLineItems">
+      <EndProperty Name="GLAccounts">
+        <ScalarProperty Name="AccountNo" ColumnName="AccountNo" />
+      </EndProperty>
+      <EndProperty Name="InvoiceLineItems">
+        <ScalarProperty Name="InvoiceID" ColumnName="InvoiceID" />
+        <ScalarProperty Name="InvoiceSequence" ColumnName="InvoiceSequence" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="FK_Vendors_GLAccounts" TypeName="PayablesModel.FK_Vendors_GLAccounts" StoreEntitySet="Vendors">
+      <EndProperty Name="GLAccounts">
+        <ScalarProperty Name="AccountNo" ColumnName="DefaultAccountNo" />
+      </EndProperty>
+      <EndProperty Name="Vendors">
+        <ScalarProperty Name="VendorID" ColumnName="VendorID" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="FK_Invoices_Terms" TypeName="PayablesModel.FK_Invoices_Terms" StoreEntitySet="Invoices">
+      <EndProperty Name="Terms">
+        <ScalarProperty Name="TermsID" ColumnName="TermsID" />
+      </EndProperty>
+      <EndProperty Name="Invoices">
+        <ScalarProperty Name="InvoiceID" ColumnName="InvoiceID" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="FK_Invoices_Vendors" TypeName="PayablesModel.FK_Invoices_Vendors" StoreEntitySet="Invoices">
+      <EndProperty Name="Vendors">
+        <ScalarProperty Name="VendorID" ColumnName="VendorID" />
+      </EndProperty>
+      <EndProperty Name="Invoices">
+        <ScalarProperty Name="InvoiceID" ColumnName="InvoiceID" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="FK_Vendors_States" TypeName="PayablesModel.FK_Vendors_States" StoreEntitySet="Vendors">
+      <EndProperty Name="States">
+        <ScalarProperty Name="StateCode" ColumnName="State" />
+      </EndProperty>
+      <EndProperty Name="Vendors">
+        <ScalarProperty Name="VendorID" ColumnName="VendorID" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="FK_Vendors_Terms" TypeName="PayablesModel.FK_Vendors_Terms" StoreEntitySet="Vendors">
+      <EndProperty Name="Terms">
+        <ScalarProperty Name="TermsID" ColumnName="DefaultTermsID" />
+      </EndProperty>
+      <EndProperty Name="Vendors">
+        <ScalarProperty Name="VendorID" ColumnName="VendorID" />
+      </EndProperty>
+    </AssociationSetMapping>
+  </EntityContainerMapping>
+</Mapping>

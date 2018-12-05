@@ -1,0 +1,159 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="PayablesModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="GLAccount">
+    <Key>
+      <PropertyRef Name="AccountNo" />
+    </Key>
+    <Property Name="AccountNo" Type="Int32" Nullable="false" />
+    <Property Name="Description" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <NavigationProperty Name="InvoiceLineItems" Relationship="Self.FK_InvoiceLineItems_GLAccounts" FromRole="GLAccounts" ToRole="InvoiceLineItems" />
+    <NavigationProperty Name="Vendors" Relationship="Self.FK_Vendors_GLAccounts" FromRole="GLAccounts" ToRole="Vendors" />
+  </EntityType>
+  <EntityType Name="InvoiceLineItem">
+    <Key>
+      <PropertyRef Name="InvoiceID" />
+      <PropertyRef Name="InvoiceSequence" />
+    </Key>
+    <Property Name="InvoiceID" Type="Int32" Nullable="false" />
+    <Property Name="InvoiceSequence" Type="Int16" Nullable="false" />
+    <Property Name="Amount" Type="Decimal" Precision="19" Scale="4" Nullable="false" />
+    <Property Name="Description" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+    <NavigationProperty Name="GLAccount" Relationship="Self.FK_InvoiceLineItems_GLAccounts" FromRole="InvoiceLineItems" ToRole="GLAccounts" />
+    <NavigationProperty Name="Invoice" Relationship="Self.FK_InvoiceLineItems_Invoices" FromRole="InvoiceLineItems" ToRole="Invoices" />
+  </EntityType>
+  <EntityType Name="Invoice">
+    <Key>
+      <PropertyRef Name="InvoiceID" />
+    </Key>
+    <Property Name="InvoiceID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="InvoiceNumber" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="InvoiceDate" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="InvoiceTotal" Type="Decimal" Precision="19" Scale="4" Nullable="false" />
+    <Property Name="PaymentTotal" Type="Decimal" Precision="19" Scale="4" Nullable="false" />
+    <Property Name="CreditTotal" Type="Decimal" Precision="19" Scale="4" Nullable="false" />
+    <Property Name="DueDate" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="PaymentDate" Type="DateTime" Precision="0" />
+    <NavigationProperty Name="InvoiceLineItems" Relationship="Self.FK_InvoiceLineItems_Invoices" FromRole="Invoices" ToRole="InvoiceLineItems" />
+    <NavigationProperty Name="Term" Relationship="Self.FK_Invoices_Terms" FromRole="Invoices" ToRole="Terms" />
+    <NavigationProperty Name="Vendor" Relationship="Self.FK_Invoices_Vendors" FromRole="Invoices" ToRole="Vendors" />
+  </EntityType>
+  <EntityType Name="State">
+    <Key>
+      <PropertyRef Name="StateCode" />
+    </Key>
+    <Property Name="StateCode" Type="String" MaxLength="2" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="StateName" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="FirstZipCode" Type="Int32" Nullable="false" />
+    <Property Name="LastZipCode" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="Vendors" Relationship="Self.FK_Vendors_States" FromRole="States" ToRole="Vendors" />
+  </EntityType>
+  <EntityType Name="Term">
+    <Key>
+      <PropertyRef Name="TermsID" />
+    </Key>
+    <Property Name="TermsID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Description" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="DueDays" Type="Int16" Nullable="false" />
+    <NavigationProperty Name="Invoices" Relationship="Self.FK_Invoices_Terms" FromRole="Terms" ToRole="Invoices" />
+    <NavigationProperty Name="Vendors" Relationship="Self.FK_Vendors_Terms" FromRole="Terms" ToRole="Vendors" />
+  </EntityType>
+  <EntityType Name="Vendor">
+    <Key>
+      <PropertyRef Name="VendorID" />
+    </Key>
+    <Property Name="VendorID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Address1" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Address2" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="City" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="ZipCode" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Phone" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="ContactLName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="ContactFName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="RowVersion" Type="Binary" MaxLength="8" FixedLength="true" Nullable="false" annotation:StoreGeneratedPattern="Computed" />
+    <NavigationProperty Name="GLAccount" Relationship="Self.FK_Vendors_GLAccounts" FromRole="Vendors" ToRole="GLAccounts" />
+    <NavigationProperty Name="Invoices" Relationship="Self.FK_Invoices_Vendors" FromRole="Vendors" ToRole="Invoices" />
+    <NavigationProperty Name="State" Relationship="Self.FK_Vendors_States" FromRole="Vendors" ToRole="States" />
+    <NavigationProperty Name="Term" Relationship="Self.FK_Vendors_Terms" FromRole="Vendors" ToRole="Terms" />
+  </EntityType>
+  <Association Name="FK_InvoiceLineItems_GLAccounts">
+    <End Role="GLAccounts" Type="Self.GLAccount" Multiplicity="1" />
+    <End Role="InvoiceLineItems" Type="Self.InvoiceLineItem" Multiplicity="*" />
+  </Association>
+  <Association Name="FK_Vendors_GLAccounts">
+    <End Role="GLAccounts" Type="Self.GLAccount" Multiplicity="1" />
+    <End Role="Vendors" Type="Self.Vendor" Multiplicity="*" />
+  </Association>
+  <Association Name="FK_InvoiceLineItems_Invoices">
+    <End Role="Invoices" Type="Self.Invoice" Multiplicity="1" />
+    <End Role="InvoiceLineItems" Type="Self.InvoiceLineItem" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Invoices">
+        <PropertyRef Name="InvoiceID" />
+      </Principal>
+      <Dependent Role="InvoiceLineItems">
+        <PropertyRef Name="InvoiceID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Invoices_Terms">
+    <End Role="Terms" Type="Self.Term" Multiplicity="1" />
+    <End Role="Invoices" Type="Self.Invoice" Multiplicity="*" />
+  </Association>
+  <Association Name="FK_Invoices_Vendors">
+    <End Role="Vendors" Type="Self.Vendor" Multiplicity="1" />
+    <End Role="Invoices" Type="Self.Invoice" Multiplicity="*" />
+  </Association>
+  <Association Name="FK_Vendors_States">
+    <End Role="States" Type="Self.State" Multiplicity="1" />
+    <End Role="Vendors" Type="Self.Vendor" Multiplicity="*" />
+  </Association>
+  <Association Name="FK_Vendors_Terms">
+    <End Role="Terms" Type="Self.Term" Multiplicity="1" />
+    <End Role="Vendors" Type="Self.Vendor" Multiplicity="*" />
+  </Association>
+  <EntityContainer Name="PayablesEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="GLAccounts" EntityType="Self.GLAccount" />
+    <EntitySet Name="InvoiceLineItems" EntityType="Self.InvoiceLineItem" />
+    <EntitySet Name="Invoices" EntityType="Self.Invoice" />
+    <EntitySet Name="States" EntityType="Self.State" />
+    <EntitySet Name="Terms" EntityType="Self.Term" />
+    <EntitySet Name="Vendors" EntityType="Self.Vendor" />
+    <AssociationSet Name="FK_InvoiceLineItems_GLAccounts" Association="Self.FK_InvoiceLineItems_GLAccounts">
+      <End Role="GLAccounts" EntitySet="GLAccounts" />
+      <End Role="InvoiceLineItems" EntitySet="InvoiceLineItems" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Vendors_GLAccounts" Association="Self.FK_Vendors_GLAccounts">
+      <End Role="GLAccounts" EntitySet="GLAccounts" />
+      <End Role="Vendors" EntitySet="Vendors" />
+    </AssociationSet>
+    <AssociationSet Name="FK_InvoiceLineItems_Invoices" Association="Self.FK_InvoiceLineItems_Invoices">
+      <End Role="Invoices" EntitySet="Invoices" />
+      <End Role="InvoiceLineItems" EntitySet="InvoiceLineItems" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Invoices_Terms" Association="Self.FK_Invoices_Terms">
+      <End Role="Terms" EntitySet="Terms" />
+      <End Role="Invoices" EntitySet="Invoices" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Invoices_Vendors" Association="Self.FK_Invoices_Vendors">
+      <End Role="Vendors" EntitySet="Vendors" />
+      <End Role="Invoices" EntitySet="Invoices" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Vendors_States" Association="Self.FK_Vendors_States">
+      <End Role="States" EntitySet="States" />
+      <End Role="Vendors" EntitySet="Vendors" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Vendors_Terms" Association="Self.FK_Vendors_Terms">
+      <End Role="Terms" EntitySet="Terms" />
+      <End Role="Vendors" EntitySet="Vendors" />
+    </AssociationSet>
+    <EntitySet Name="DeleteLogs" EntityType="PayablesModel.DeleteLog" />
+  </EntityContainer>
+  <EntityType Name="DeleteLog">
+    <Key>
+      <PropertyRef Name="VendorID" />
+    </Key>
+    <Property Name="VendorID" Type="Int32" Nullable="false" />
+    <Property Name="DeletedDate" Type="DateTime" Nullable="false" Precision="3" />
+  </EntityType>
+</Schema>

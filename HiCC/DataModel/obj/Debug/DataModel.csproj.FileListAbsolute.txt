@@ -1,10 +1,22 @@
-F:\DHSPKT_L\N3HKI\HeQTCSDL\7\HiCC\DataModel\bin\Debug\DataModel.dll.config
-F:\DHSPKT_L\N3HKI\HeQTCSDL\7\HiCC\DataModel\bin\Debug\DataModel.dll
-F:\DHSPKT_L\N3HKI\HeQTCSDL\7\HiCC\DataModel\bin\Debug\DataModel.pdb
-F:\DHSPKT_L\N3HKI\HeQTCSDL\7\HiCC\DataModel\bin\Debug\EntityFramework.dll
-F:\DHSPKT_L\N3HKI\HeQTCSDL\7\HiCC\DataModel\bin\Debug\EntityFramework.SqlServer.dll
-F:\DHSPKT_L\N3HKI\HeQTCSDL\7\HiCC\DataModel\bin\Debug\EntityFramework.xml
-F:\DHSPKT_L\N3HKI\HeQTCSDL\7\HiCC\DataModel\bin\Debug\EntityFramework.SqlServer.xml
-F:\DHSPKT_L\N3HKI\HeQTCSDL\7\HiCC\DataModel\obj\Debug\DataModel.csprojResolveAssemblyReference.cache
-F:\DHSPKT_L\N3HKI\HeQTCSDL\7\HiCC\DataModel\obj\Debug\DataModel.dll
-F:\DHSPKT_L\N3HKI\HeQTCSDL\7\HiCC\DataModel\obj\Debug\DataModel.pdb
+D:\HQT\New folder\HiCC\DataModel\bin\Debug\DataModel.dll.config
+D:\HQT\New folder\HiCC\DataModel\bin\Debug\DataModel.dll
+D:\HQT\New folder\HiCC\DataModel\bin\Debug\DataModel.pdb
+D:\HQT\New folder\HiCC\DataModel\bin\Debug\EntityFramework.dll
+D:\HQT\New folder\HiCC\DataModel\bin\Debug\EntityFramework.SqlServer.dll
+D:\HQT\New folder\HiCC\DataModel\bin\Debug\EntityFramework.xml
+D:\HQT\New folder\HiCC\DataModel\bin\Debug\EntityFramework.SqlServer.xml
+D:\HQT\New folder\HiCC\DataModel\obj\Debug\DataModel.csproj.CoreCompileInputs.cache
+D:\HQT\New folder\HiCC\DataModel\obj\Debug\DataModel.csproj.CopyComplete
+D:\HQT\New folder\HiCC\DataModel\obj\Debug\DataModel.dll
+D:\HQT\New folder\HiCC\DataModel\obj\Debug\DataModel.pdb
+D:\HQT\New folder\HiCC\DataModel\obj\Debug\DataModel.csprojResolveAssemblyReference.cache
+F:\DHSPKT_L\N3HKI\HeQTCSDL\HiCC\DataModel\bin\Debug\DataModel.dll.config
+F:\DHSPKT_L\N3HKI\HeQTCSDL\HiCC\DataModel\bin\Debug\DataModel.dll
+F:\DHSPKT_L\N3HKI\HeQTCSDL\HiCC\DataModel\bin\Debug\DataModel.pdb
+F:\DHSPKT_L\N3HKI\HeQTCSDL\HiCC\DataModel\bin\Debug\EntityFramework.dll
+F:\DHSPKT_L\N3HKI\HeQTCSDL\HiCC\DataModel\bin\Debug\EntityFramework.SqlServer.dll
+F:\DHSPKT_L\N3HKI\HeQTCSDL\HiCC\DataModel\bin\Debug\EntityFramework.xml
+F:\DHSPKT_L\N3HKI\HeQTCSDL\HiCC\DataModel\bin\Debug\EntityFramework.SqlServer.xml
+F:\DHSPKT_L\N3HKI\HeQTCSDL\HiCC\DataModel\obj\Debug\DataModel.csprojResolveAssemblyReference.cache
+F:\DHSPKT_L\N3HKI\HeQTCSDL\HiCC\DataModel\obj\Debug\DataModel.dll
+F:\DHSPKT_L\N3HKI\HeQTCSDL\HiCC\DataModel\obj\Debug\DataModel.pdb

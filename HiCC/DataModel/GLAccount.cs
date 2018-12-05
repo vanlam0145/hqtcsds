@@ -17,16 +17,16 @@ namespace DataModel
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public GLAccount()
         {
-            this.InvoiceLineItems = new ObservablelistSource<InvoiceLineItem>();
-            this.Vendors = new ObservablelistSource<Vendor>();
+            this.InvoiceLineItems = new ObservableListSource<InvoiceLineItem>();
+            this.Vendors = new ObservableListSource<Vendor>();
         }
     
         public int AccountNo { get; set; }
         public string Description { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ObservablelistSource<InvoiceLineItem> InvoiceLineItems { get; set; }
+        public virtual ObservableListSource<InvoiceLineItem> InvoiceLineItems { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ObservablelistSource<Vendor> Vendors { get; set; }
+        public virtual ObservableListSource<Vendor> Vendors { get; set; }
     }
 }

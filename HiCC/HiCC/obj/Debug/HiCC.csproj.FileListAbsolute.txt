@@ -1,17 +1,39 @@
-F:\DHSPKT_L\N3HKI\HeQTCSDL\7\HiCC\HiCC\bin\Debug\HiCC.exe.config
-F:\DHSPKT_L\N3HKI\HeQTCSDL\7\HiCC\HiCC\bin\Debug\HiCC.exe
-F:\DHSPKT_L\N3HKI\HeQTCSDL\7\HiCC\HiCC\bin\Debug\HiCC.pdb
-F:\DHSPKT_L\N3HKI\HeQTCSDL\7\HiCC\HiCC\bin\Debug\DataModel.dll
-F:\DHSPKT_L\N3HKI\HeQTCSDL\7\HiCC\HiCC\bin\Debug\EntityFramework.dll
-F:\DHSPKT_L\N3HKI\HeQTCSDL\7\HiCC\HiCC\bin\Debug\EntityFramework.SqlServer.dll
-F:\DHSPKT_L\N3HKI\HeQTCSDL\7\HiCC\HiCC\bin\Debug\DataModel.pdb
-F:\DHSPKT_L\N3HKI\HeQTCSDL\7\HiCC\HiCC\bin\Debug\EntityFramework.xml
-F:\DHSPKT_L\N3HKI\HeQTCSDL\7\HiCC\HiCC\bin\Debug\EntityFramework.SqlServer.xml
-F:\DHSPKT_L\N3HKI\HeQTCSDL\7\HiCC\HiCC\obj\Debug\HiCC.csprojResolveAssemblyReference.cache
-F:\DHSPKT_L\N3HKI\HeQTCSDL\7\HiCC\HiCC\obj\Debug\HiCC.Form1.resources
-F:\DHSPKT_L\N3HKI\HeQTCSDL\7\HiCC\HiCC\obj\Debug\HiCC.Properties.Resources.resources
-F:\DHSPKT_L\N3HKI\HeQTCSDL\7\HiCC\HiCC\obj\Debug\HiCC.csproj.GenerateResource.Cache
-F:\DHSPKT_L\N3HKI\HeQTCSDL\7\HiCC\HiCC\obj\Debug\HiCC.exe
-F:\DHSPKT_L\N3HKI\HeQTCSDL\7\HiCC\HiCC\obj\Debug\HiCC.pdb
-F:\DHSPKT_L\N3HKI\HeQTCSDL\7\HiCC\HiCC\obj\Debug\HiCC.fmFVendor.resources
-F:\DHSPKT_L\N3HKI\HeQTCSDL\7\HiCC\HiCC\obj\Debug\HiCC.AddModifyVendor.resources
+D:\HQT\New folder\HiCC\HiCC\bin\Debug\HiCC.exe.config
+D:\HQT\New folder\HiCC\HiCC\bin\Debug\HiCC.exe
+D:\HQT\New folder\HiCC\HiCC\bin\Debug\HiCC.pdb
+D:\HQT\New folder\HiCC\HiCC\bin\Debug\DataModel.dll
+D:\HQT\New folder\HiCC\HiCC\bin\Debug\EntityFramework.dll
+D:\HQT\New folder\HiCC\HiCC\bin\Debug\EntityFramework.SqlServer.dll
+D:\HQT\New folder\HiCC\HiCC\bin\Debug\DataModel.pdb
+D:\HQT\New folder\HiCC\HiCC\bin\Debug\DataModel.dll.config
+D:\HQT\New folder\HiCC\HiCC\bin\Debug\EntityFramework.xml
+D:\HQT\New folder\HiCC\HiCC\bin\Debug\EntityFramework.SqlServer.xml
+D:\HQT\New folder\HiCC\HiCC\obj\Debug\HiCC.csprojResolveAssemblyReference.cache
+D:\HQT\New folder\HiCC\HiCC\obj\Debug\HiCC.Form1.resources
+D:\HQT\New folder\HiCC\HiCC\obj\Debug\HiCC.Properties.Resources.resources
+D:\HQT\New folder\HiCC\HiCC\obj\Debug\HiCC.csproj.GenerateResource.cache
+D:\HQT\New folder\HiCC\HiCC\obj\Debug\HiCC.csproj.CoreCompileInputs.cache
+D:\HQT\New folder\HiCC\HiCC\obj\Debug\HiCC.csproj.CopyComplete
+D:\HQT\New folder\HiCC\HiCC\obj\Debug\HiCC.exe
+D:\HQT\New folder\HiCC\HiCC\obj\Debug\HiCC.pdb
+D:\HQT\New folder\HiCC\HiCC\obj\Debug\HiCC.FrmFindVendor.resources
+D:\HQT\New folder\HiCC\HiCC\obj\Debug\HiCC.AddModifyVendor.resources
+F:\DHSPKT_L\N3HKI\HeQTCSDL\HiCC\HiCC\bin\Debug\HiCC.exe.config
+F:\DHSPKT_L\N3HKI\HeQTCSDL\HiCC\HiCC\obj\Debug\HiCC.exe
+F:\DHSPKT_L\N3HKI\HeQTCSDL\HiCC\HiCC\obj\Debug\HiCC.pdb
+F:\DHSPKT_L\N3HKI\HeQTCSDL\HiCC\HiCC\obj\Debug\HiCC.csprojResolveAssemblyReference.cache
+F:\DHSPKT_L\N3HKI\HeQTCSDL\HiCC\HiCC\obj\Debug\HiCC.AddModifyVendor.resources
+F:\DHSPKT_L\N3HKI\HeQTCSDL\HiCC\HiCC\obj\Debug\HiCC.FrmFindVendor.resources
+F:\DHSPKT_L\N3HKI\HeQTCSDL\HiCC\HiCC\obj\Debug\HiCC.Form1.resources
+F:\DHSPKT_L\N3HKI\HeQTCSDL\HiCC\HiCC\obj\Debug\HiCC.Properties.Resources.resources
+F:\DHSPKT_L\N3HKI\HeQTCSDL\HiCC\HiCC\obj\Debug\HiCC.csproj.GenerateResource.Cache
+F:\DHSPKT_L\N3HKI\HeQTCSDL\HiCC\HiCC\bin\Debug\HiCC.exe
+F:\DHSPKT_L\N3HKI\HeQTCSDL\HiCC\HiCC\bin\Debug\HiCC.pdb
+F:\DHSPKT_L\N3HKI\HeQTCSDL\HiCC\HiCC\bin\Debug\DataModel.dll
+F:\DHSPKT_L\N3HKI\HeQTCSDL\HiCC\HiCC\bin\Debug\EntityFramework.dll
+F:\DHSPKT_L\N3HKI\HeQTCSDL\HiCC\HiCC\bin\Debug\EntityFramework.SqlServer.dll
+F:\DHSPKT_L\N3HKI\HeQTCSDL\HiCC\HiCC\bin\Debug\DataModel.pdb
+F:\DHSPKT_L\N3HKI\HeQTCSDL\HiCC\HiCC\bin\Debug\EntityFramework.xml
+F:\DHSPKT_L\N3HKI\HeQTCSDL\HiCC\HiCC\bin\Debug\EntityFramework.SqlServer.xml
+F:\DHSPKT_L\N3HKI\HeQTCSDL\HiCC\HiCC\obj\Debug\HiCC.Line_Items.resources
+F:\DHSPKT_L\N3HKI\HeQTCSDL\HiCC\HiCC\obj\Debug\HiCC.frmAddInvoice.resources
